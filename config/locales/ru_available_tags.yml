@@ -2,10 +2,10 @@
 ru:
   desc: 
     author:
-      Renders the name of the author of the current page.
+      Отображает имя автора выбранной страницы
   
     breadcrumb:
-        Renders the @breadcrumb@ attribute of the current page.
+        Отображает аттрибут @breadcrumb@ для выбранной страницы.
       
     breadcrumbs:
       Renders a trail of breadcrumbs to the current page. The separator attribute
