@@ -8,17 +8,15 @@ ru:
         Отображает аттрибут @breadcrumb@ для выбранной страницы.
       
     breadcrumbs:
-      Renders a trail of breadcrumbs to the current page. The separator attribute
-      specifies the HTML fragment that is inserted between each of the breadcrumbs. By
-      default it is set to @>@. The boolean nolinks attribute can be specified to render
-      breadcrumbs in plain text, without any links (useful when generating title tag).
+      Показвает путь из хлебных крошек к текущей странице. Аттрибут separator указывает фрагмент HTML
+      который быдет вставлен между хлебными крошками. По умолчанию он это @>@. Флаг nolinks может быть установлен чтобы отобразить хлебные крошки простым текстом без ссылок(к примеру, это полезно для изпользования в тэге title).
 
-      *Usage&#58;*
+      *Пример использования&#58;*
 
       <pre><code><r&#58;breadcrumbs [separator="separator_string"] [nolinks="true"] /></code></pre>
   
     children-count:
-      Renders the total number of children.
+      Отображает количество всех потомков.
   
     children-each-child:
       Page attribute tags inside of this tag refer to the current child. This is occasionally
