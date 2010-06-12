@@ -7,7 +7,7 @@ ru:
          blank: 'обязательное поле' # required
          invalid: 'неверный формат' #invalid_format
          not_a_number: 'должно быть числом' # must be number
-         taken: 'имя ужк существует' # name_in_use
+         taken: 'имя ужe существует' # name_in_use
          too_long: 'ограничение {{count}} символов' # character_limit
          too_short: 'минимум {{count}} символов' # character_minimum
        models:
