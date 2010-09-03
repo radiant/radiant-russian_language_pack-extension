@@ -28,9 +28,9 @@ ru:
    add_tab: 'Добавить вкладку'
    admin: 'Администратор'
    available_tags: 'Доступные тэги'
-   available_tags_for: 'Тэги доступные для'
+   available_tags_for: 'Тэги '
    body: 'Содержимое'
-   breadcrumb: 'Breadcrumb'
+   breadcrumb: 'Хлебная крошка'
    buttons:
      create: 'Создать' # removed {{name}} because of russian word cases problems 
      save_and_continue: 'Сохранить и продолжить'
@@ -79,6 +79,7 @@ ru:
    login: 'Войти'
    modify: 'Изменить'
    more: 'Дополнительно'
+   More: 'Ещё'
    name: 'Имя'
    new_layout: 'Новый Макет'
    new_page: 'Новая Страница'
@@ -89,8 +90,8 @@ ru:
    notes: 'Заметки'
    optional: 'Опционально'
    or: '&nbsp;&nbsp;'
-   page: 'Страница'   # Странмца vs. Страницу
-   page_page: 'Page Part'
+   page: 'Страница' 
+   page_page: 'Часть страницы'
    page_title: 'Заголовок'
    page_type: 'Тип страницы'
    pages: 'Страницы'
@@ -131,11 +132,11 @@ ru:
    saving_preferences: Сохранение настроек
    search_tags: 'Поиск по тэгам:'
    select:
-     inherit: '<inherit>'
-     none: '<none>'
-     normal: '<normal>'
+     inherit: '<родительский>'
+     none: '<нет>'
+     normal: '<обычный>'
    settings: 'Настройки'
-   slug: 'окончание URL (slug)'
+   slug: 'адрес (slug)'
    snippet: 'Вставка'
    snippets: 'Вставки'
    status: 'Статус'
@@ -173,8 +174,11 @@ ru:
    users_controller:
      cannot_delete_self: "Нельзя удалять себя."
    version: 'Версия'
-   view_site: 'Просмотр сайта'
+   view_site: 'Cайт -&gt;'
    website: 'Веб сайт'
    welcome_controller:
      invalid_user: "Неверное имя либо пароль."
      logged_out: "Вы вышли из системы."
+   normal_page: Страница
+   archive: Архив
+   published_on: Дата публикации
