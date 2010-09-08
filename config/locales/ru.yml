@@ -169,7 +169,7 @@ ru:
      by: 'пользователем'
      last_updated: 'Обновлено'
    user: 'Пользователь'
-   username: 'Имя'
+   username: 'Login'
    users: 'Пользователи'
    users_controller:
      cannot_delete_self: "Нельзя удалять себя."
@@ -182,3 +182,8 @@ ru:
    normal_page: Страница
    archive: Архив
    published_on: Дата публикации
+   search: Поиск
+   new_javascript: Новый javascript
+   new_stilesheet: Новый файл стилей
+   upload: Загрузить
+   edit_stylesheet: Редактирование
