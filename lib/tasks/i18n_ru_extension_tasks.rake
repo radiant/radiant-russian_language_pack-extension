@@ -6,9 +6,9 @@ namespace :radiant do
       task :migrate => :environment do
         require 'radiant/extension_migrator'
         if ENV["VERSION"]
-          I18nRuExtension.migrator.migrate(ENV["VERSION"].to_i)
+          RussianLanguagePackExtension.migrator.migrate(ENV["VERSION"].to_i)
         else
-          I18nRuExtension.migrator.migrate
+          RussianLanguagePackExtension.migrator.migrate
         end
       end
       
@@ -16,8 +16,8 @@ namespace :radiant do
       task :update => :environment do
         is_svn_or_dir = proc {|path| path =~ /\.svn/ || File.directory?(path) }
         puts "Copying assets from I18nRuExtension"
-        Dir[I18nRuExtension.root + "/public/**/*"].reject(&is_svn_or_dir).each do |file|
-          path = file.sub(I18nRuExtension.root, '')
+        Dir[RussianLanguagePackExtension.root + "/public/**/*"].reject(&is_svn_or_dir).each do |file|
+          path = file.sub(RussianLanguagePackExtension.root, '')
           directory = File.dirname(path)
           mkdir_p RAILS_ROOT + directory, :verbose => false
           cp file, RAILS_ROOT + path, :verbose => false
