@@ -1,5 +1,5 @@
 ---
-ru: 
+ru:
    account: 'Учетная Запись'
    activerecord:
      errors:
@@ -7,6 +7,8 @@ ru:
          blank: 'обязательное поле' # required
          invalid: 'неверный формат' #invalid_format
          not_a_number: 'должно быть числом' # must be number
+         not_a_page: "должно быть страницей по адресу"
+         not_permitted: 'должно быть допустимым значением'
          taken: 'имя ужe существует' # name_in_use
          too_long: 'ограничение {{count}} символов' # character_limit
          too_short: 'минимум {{count}} символов' # character_minimum
@@ -24,6 +26,7 @@ ru:
              password:
                confirmation: 'несоответствие подтверждению' # password_confirmation
    add_child: 'Добавить Потомка'
+   add_field: 'Добавить поле'
    add_part: 'Добавить Часть'
    add_tab: 'Добавить вкладку'
    admin: 'Администратор'
@@ -32,12 +35,33 @@ ru:
    body: 'Содержимое'
    breadcrumb: 'Хлебная крошка'
    buttons:
-     create: 'Создать' # removed {{name}} because of russian word cases problems 
+     create: 'Создать' # removed {{name}} because of russian word cases problems
      save_and_continue: 'Сохранить и продолжить'
      save_changes: 'Сохранить'
    cancel: 'Отменить'
    change: 'Изменить'
    close: 'Закрыть'
+   config:
+     admin:
+       title: 'Заголовок админки'
+     defaults:
+       locale: 'Язык по умолчанию'
+       page:
+         fields: "Поля страницы"
+         filter: "Фильтр страницы"
+         parts: "Части страницы"
+         status: "Статус страницы"
+       snippet:
+         filter: "Фильтр сниппета"
+     dev:
+       host: "Домен сайта разработки"
+     local:
+       timezone: "Часовой пояс"
+     site:
+       title: "Название сайта"
+       host: "Домен сайта"
+     user:
+       allow_password_reset?: "Позволять сбрасывать пароль"
    content: 'Содержимое'
    content_type: 'Content&#8209;Type'
    creating_status: 'Создается {{model}}&#8230;'
@@ -51,19 +75,26 @@ ru:
        only_day: "%e"
        short: "%e %b"
      month_names: [~, Января, Февраля, Марта, Апреля, Мая, Июня, Июля, Августа, Сентября, Октября, Ноября, Декабря]
-     order: [ :day, :month, :year ]
-   delete_layout: 'Удалить Макет' #delete
+     order:
+       - :year
+       - :month
+       - :day
+   delete_layout: 'Удалить макет' #delete
    delete_pages: 'Удалить {{pages}}'  #button
-   delete_snippet: 'Удалить Вставку'
-   delete_user: 'Удалить Пользователя'
+   delete_snippet: 'Удалить вставку'
+   delete_user: 'Удалить пользователя'
    description: 'Описание'
    design: 'Дизайн'
    designer: 'Дизайнер'
    draft: 'Черновик'
-   edit_layout: 'Редактирование Макета'
-   edit_page:  'Редактирование Страницы'
-   edit_snippet: 'Редактирование Вставки'
-   edit_user: 'Редактирование Пользователя'
+   edit: 'Редактировать'
+   edit_configuration: 'Редактировать конфигурацию'
+   edit_layout: 'Редактировать макет'
+   edit_page:  'Редактировать страницу'
+   edit_preferences: 'Редактировать настройки'
+   edit_settings: 'Редактировать настройки'
+   edit_snippet: 'Редактировать вставки'
+   edit_user: 'Редактировать пользователя'
    email_address: 'E-mail адрес'
    extension: 'Расширение'
    extensions: 'Расширения'
@@ -78,18 +109,25 @@ ru:
    logged_in_as: 'Текущий Пользователь'
    login: 'Войти'
    modify: 'Изменить'
-   More: 'Ещё'
+   more: 'Ещё'
+   more_info: 'Ещё'
    name: 'Имя'
-   new_layout: 'Новый Макет'
-   new_page: 'Новая Страница'
-   new_password: 'Новый Пароль'
-   new_snippet: 'Новая Вставка'
-   new_user: 'Новый Пользователь'
+   new_homepage: 'Новая главная'
+   new_layout: 'Новый макет'
+   new_page: 'Новая страница'
+   new_password: 'Новый пароль'
+   new_snippet: 'Новая вставка'
+   new_user: 'Новый пользователь'
+   'no': 'Нет'
+   no_layouts: 'Нет макетов'
    no_pages: 'Нет страниц'
+   no_snippets: 'Нет сниппетов'
+   normal_page: 'Нормальная страница'
    notes: 'Заметки'
    optional: 'Опционально'
    or: '&nbsp;&nbsp;'
-   page: 'Страница' 
+   page: 'Страница'
+   page_hierarchy: 'Иерархия страниц текущего сайта'
    page_page: 'Часть страницы'
    page_title: 'Заголовок'
    page_type: 'Тип страницы'
@@ -108,17 +146,21 @@ ru:
    preferences_controller:
      error_updating: "Ошибка при сохранении настроек."
      updated: "Ваши настройки сохранены"
+   preview: 'Предпросмотр'
    published: 'Опубликована'
    published_at: 'Опубликовано'
    published_on: 'Дата публикации'
    reference:  'Справка'
    remember_me: 'Запомнить меня'
+   remember_me_in_this_browser: 'Запомнить меня в этом браузере'
    remove: 'Удалить'
-   remove_layout: 'Удалить Макет' #remove
+   remove_field: 'Удалить поле'
+   remove_layout: 'Удалить макет'
    remove_page: 'Удалить страницу'
    remove_pages: 'Удалить {{pages}}'  #page title
+   remove_snippet: 'Удалить сниппет'
    remove_tab: 'Удалить вкладку'
-   remove_user: 'Удалить Пользователя'
+   remove_user: 'Удалить пользователя'
    required: 'Обязательно'
    resource_controller:
      not_found: "{{humanized_model_name}} не удалось найти."
@@ -133,23 +175,26 @@ ru:
    scheduled: Ожидает публикации
    search_tags: 'Поиск по тэгам:'
    select:
+     default: '<default>'
      inherit: '<родительский>'
      none: '<нет>'
      normal: '<обычный>'
    settings: 'Настройки'
+   show_all: 'Показать всё'
    slug: 'адрес (slug)'
    snippet: 'Вставка'
    snippets: 'Вставки'
    status: 'Статус'
    # Warnings and info text:
+   testing: 'Тестирование'
    text:
      layouts:
        remove_warning: 'Вы уверены что хотите <strong class="warning">безвозвратно удалить</strong> макет'
-     pages: 
+     pages:
        remove_warning: 'Вы уверены что хотите <strong class="warning">безвозвратно удалить</strong> {{pages}}?'
      snippets:
        remove_warning: 'Вы уверены что хотите <strong class="warning">безвозвратно удалить</strong> эту вставку?'
-     users: 
+     users:
        remove_warning: 'Вы уверены что хотите <strong class="warning">безвозвратно удалить</strong> этого пользователя?'
    this_file_language: "Русский"
    time:
@@ -169,21 +214,35 @@ ru:
      at: ''
      by: 'пользователем'
      last_updated: 'Обновлено'
+   type: 'Type'
+   units:
+     KB: "KB"
+     MB: "MB"
+     GB: "GB"
+     seconds: "seconds"
+     minutes: "minutes"
+     hours: "hours"
+     days: "days"
+     weeks: "weeks"
+     months: "months"
    user: 'Пользователь'
    username: 'Логин'
+   username_or_email: 'Username or E-mail Address'
    users: 'Пользователи'
    users_controller:
      cannot_delete_self: "Нельзя удалять себя."
    version: Версия
-   view_site: 'Cайт -&gt;'   
-   website: Веб сайт
+   view_site: 'Cайт -&gt;'
+   warning: 'Осторожно'
+   website: 'Веб сайт'
    welcome_controller:
-     invalid_user: Неверное имя либо пароль.
-     logged_out: Вы вышли из системы.     
-   normal_page: Страница
-   search: Поиск
+     invalid_user: 'Неверное имя либо пароль.'
+     logged_out: 'Вы вышли из системы.'
+   'yes': 'Да'
+   normal_page: 'Страница'
+   search: 'Поиск'
    # Sheets extension
-   new_javascript: Новый javascript
-   new_stylesheet: Новый файл стилей
-   upload: Загрузить файл
-   edit_stylesheet: Редактирование файла стилей
+   new_javascript: 'Новый javascript'
+   new_stylesheet: 'Новый файл стилей'
+   upload: 'Загрузить файл'
+   edit_stylesheet: 'Редактирование файла стилей'
