@@ -1,0 +1,2 @@
+module RadiantRussianLanguagePackExtension
+end
